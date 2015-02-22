@@ -1,3 +1,6 @@
+## in this code inverse matix in cache is reset to NULL everytime makeCacheMatrix
+## runs 
+
 makeCacheMatrix <- function(x = matrix()) {
   
   m <- NULL
@@ -15,6 +18,8 @@ makeCacheMatrix <- function(x = matrix()) {
        getsolve = getsolve)
 }
 
+## create inverse matrix if no matrix is stored in cache
+## 
 cacheSolve <- function(x, ...) {
   m <- x$getsolve()
   if(!is.null(m)) {
